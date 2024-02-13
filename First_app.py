@@ -1,0 +1,26 @@
+import os
+os.system('cls')
+
+def caching_fibonacci():
+
+    cache={}
+
+    def fibonacci(n):
+        if n <= 0 :
+            return 0
+        elif n == 1:
+            return 1
+        elif n == cache:
+            return cache[n]
+        cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
+        return cache[n]
+    return fibonacci
+
+
+
+fib = caching_fibonacci()               #шкода але я поганно розумію як так та чому
+
+print(fib(10))  
+print(fib(15))  
+print(fib(20))  
+print(fib(25))                      
